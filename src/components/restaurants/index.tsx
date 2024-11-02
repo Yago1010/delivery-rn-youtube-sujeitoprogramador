@@ -13,7 +13,7 @@ export function Restaurants() {
 
   useEffect(() => {
     async function getFoods(){
-      const response = await fetch("http://192.168.0.12:3000/restaurants")
+      const response = await fetch("http://192.168.1.104:3000/restaurants")
       const data = await response.json()
       setRestaurants(data);
     }
@@ -27,7 +27,7 @@ export function Restaurants() {
     data={restaurants}
     renderItem={ ({ item }) => <RestaurantItem item={item} /> }
     horizontal={true}
-    contentContainerStyle={{ gap: 14, paddingLeft: 16, paddingRight: 16}}
+    contentContainerStyle={{ gap: 16, paddingLeft: 16, paddingRight: 16}}
     showsHorizontalScrollIndicator={false}
   />
   );
